@@ -64,13 +64,12 @@
 
 			this.searchCallback = searchCallback;
 			this.resetCallback = resetCallback;
-			console.debug('New search handler registered', this);
+			console.debug('New search handler registered');
 
 			/**
 			 * Search
 			 */
 			this._search = function(event) {
-				console.log(event);
 				event.preventDefault();
 				var query = document.getElementById('searchbox').value;
 				self.searchCallback(query);
@@ -80,7 +79,6 @@
 			 * Reset form
 			 */
 			this._reset = function(event) {
-				console.log(event);
 				event.preventDefault();
 				document.getElementById('searchbox').value = '';
 				self.resetCallback();
